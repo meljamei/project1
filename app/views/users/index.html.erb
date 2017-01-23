@@ -1,5 +1,26 @@
 <h1>Users</h1>
-<% @users.each do |user| %>
-<p><%= image_tag user.avatar, :class => 'avatar'  %><%= link_to user.name, user_path(user) %></p>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Username</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <th scope="row">2</th>
+            <td><%= image_tag user.avatar, :class => 'avatar'  %></td>
+            <td><%= link_to user.name, user_path(user) %></td>
+            <td><%= link_to user.name, user_path(user) %></td>
+          </tr>
+        <% end %>
 
-<% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

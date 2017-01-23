@@ -14,3 +14,17 @@ img.box {
   border-radius: 3%;
   display: inline-block;
 }
+
+
+img.nav-avatar {
+  width: 30px;
+  height:30px;
+  border:1px solid #fff;
+  margin-right:10px;
+  border-radius: 50%;
+}
+
+
+.navbar-brand, .navbar-nav > li > a{
+  line-height: 32px;
+}
