@@ -1,19 +1,22 @@
 <h1>Edit Profile</h1>
 
-<% if @user.errors.any? %>
+<% if @current_user.errors.any? %>
   <ol>
-    <%@user.errors.ful_message.each do |msg|%>
+    <% @current_user.errors.ful_message.each do |msg|%>
     <li> <%= msg %></li>
     <%end %>
   </ol>
   <% end %>
 
-  <%= form_for @user do |f| %>
+  <%= form_for @current_user do |f| %>
   <%= f.label :email %>
   <%= f.email_field :email %>
 
   <%= f.label :avatar %>
-  <%= f.url_field :avatar %>
+  <%= f.url_field :avatar %></br>
 
-  <%= f.submit %>
+  <%= f.label :name %>
+  <%= f.url_field :name %></br>
+
+  <%= f.submit%>
   <% end %>

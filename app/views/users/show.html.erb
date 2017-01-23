@@ -1,0 +1,11 @@
+<h1>Profile</h1>
+
+<%= image_tag @user.avatar, :class => 'avatar' %>
+<%= @user.name if @user.name.present? %>
+<%= link_to "Edit Profile", users_edit_path %>
+
+<ul>
+<% @user.images.each do |img| %>
+  <li><%= image_tag img.url , :class => "box" %></li>
+<% end %>
+</ul>

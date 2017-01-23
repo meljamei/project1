@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170122225815) do
+ActiveRecord::Schema.define(version: 20170123051134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(version: 20170122225815) do
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "categories_images", force: :cascade do |t|
+    t.integer "category_id"
+    t.integer "image_id"
   end
 
   create_table "images", force: :cascade do |t|
@@ -37,6 +42,7 @@ ActiveRecord::Schema.define(version: 20170122225815) do
     t.string   "password_digest"
     t.text     "avatar"
     t.boolean  "admin",           default: false
+    t.text     "name"
   end
 
 end
