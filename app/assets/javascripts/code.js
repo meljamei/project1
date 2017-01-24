@@ -17,4 +17,4 @@ $(document).ready(function(){
     return;
   }
   console.log("HHeyy easy");
-}
+});
