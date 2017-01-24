@@ -1,2 +1,21 @@
 <h1>Images#edit</h1>
 <p>Find me in app/views/images/edit.html.erb</p>
+
+<%= f.submit %>
+<% end %>
+
+<%= form_for(@image, :html => {:multipart => true} ) do |f| %>
+
+<%= form_for @artist do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :url %>
+    <%= f.cl_image_upload :url %>
+  </fieldset>
+    <label></label>
+    <%= f.submit %>
+  </fieldset>
+<% end %>

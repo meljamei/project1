@@ -1,8 +1,14 @@
 <h1>Category#show</h1>
 <p>Find me in app/views/category/show.html.erb</p>
 
-<ul>
-<% @category.images.each do |img| %>
-  <li><%= img.url %></li>
-<% end  %>
-</ul>
+
+<% @category.images.in_groups_of(3, false).each do |group| %>
+  <div class="row">
+    <% group.each do |img| %>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to cl_image_tag(img.url, :class => 'img-responsive'), image_path(img.id) %>
+      </div>
+    <% end %>
+  </div>
+<hr>
+<% end %>
