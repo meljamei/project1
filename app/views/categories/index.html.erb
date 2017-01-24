@@ -1,6 +1,11 @@
 <h1>Categories page</h1>
-<ul>
-<% @categories.each do |cat| %>
-  <li><%= link_to cat.title, cat %></li>
+
+<% @categories.in_groups(3, false).each do |group| %>
+  <div class="row">
+    <% group.each do |cat| %>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to image_tag(cat.cover_image, :class => 'img-responsive'), cat %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
-</ul>

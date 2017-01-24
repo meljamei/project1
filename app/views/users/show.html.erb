@@ -20,12 +20,14 @@
   </div>
 </div>
 
-<div class="row">
-  <% @user.images.each do |img| %>
-    <div class="col-xs-12 col-md-4">
-      <a href="#" class="thumbnail">
-        <%= image_tag img.url , :class => "" %>
-      </a>
-    </div>
-  <% end %>
-</div>
+<% @user.images.in_groups_of(3, false).each do |group| %>
+  <div class="row">
+    <!-- <%= group %> -->
+    <% group.each do |img| %>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to cl_image_tag(img.url, :class => 'img-responsive'), image_path(img.id) %>
+      </div>
+    <% end %>
+  </div>
+<hr>
+<% end %>

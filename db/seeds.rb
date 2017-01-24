@@ -27,15 +27,15 @@ a20 = Image.create :url => "https://static.pexels.com/photos/104827/cat-pet-anim
 
 
 Category.destroy_all
-c1 = Category.create :title => 'Flower'
-c2 = Category.create :title => 'Cat'
-c3 = Category.create :title => 'Ocean'
-c4 = Category.create :title => 'Dance'
-c5 = Category.create :title => 'Desert'
-c6 = Category.create :title => 'Food'
-c7 = Category.create :title => 'Car'
-c8 = Category.create :title => 'Dog'
-c9 = Category.create :title => 'Portrait'
+c1 = Category.create :title => 'Flower', :cover_image => 'https://static.pexels.com/photos/122734/pexels-photo-122734.jpeg'
+c2 = Category.create :title => 'Cat', :cover_image => 'https://static.pexels.com/photos/22346/pexels-photo.jpg'
+c3 = Category.create :title => 'Ocean', :cover_image =>'https://static.pexels.com/photos/35007/pexels-photo.jpg'
+c4 = Category.create :title => 'Music', :cover_image => 'https://static.pexels.com/photos/111287/pexels-photo-111287.jpeg'
+c5 = Category.create :title => 'Desert', :cover_image => "https://www.sciencenews.org/sites/default/files/main/articles/ts_7963972876_46c3b7b651_o_free.jpg"
+c6 = Category.create :title => 'Food', :cover_image => 'https://static.pexels.com/photos/48726/pexels-photo-48726.jpeg'
+c7 = Category.create :title => 'Car', :cover_image => 'https://static.pexels.com/photos/173286/pexels-photo-173286.jpeg'
+c8 = Category.create :title => 'Dog', :cover_image => 'https://static.pexels.com/photos/139519/pexels-photo-139519.jpeg'
+c9 = Category.create :title => 'Portrait', :cover_image => 'http://www.stockvault.net/blog/wp-content/uploads/2013/11/Portrait-8.jpg'
 
 
 
