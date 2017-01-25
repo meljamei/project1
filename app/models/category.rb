@@ -13,4 +13,12 @@
 class Category < ActiveRecord::Base
   has_many :users
   has_and_belongs_to_many :images
+
+  def self.search(search)
+  if search
+    find(:all, :conditions => ['category LIKE ?', "%#{search}%"])
+  else
+    all
+  end
+end
 end

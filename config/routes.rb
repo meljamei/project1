@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   post '/images/:image_id/likes' => 'likes#create', :as => 'likes'
   delete '/images/:image_id/likes' => 'likes#destroy'
 
-  get '/categories' => 'categories#index'
+  get '/categories/search/:query' => 'categories#search'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
