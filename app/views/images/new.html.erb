@@ -1,4 +1,4 @@
-<h1>Upload Photos</h1>
+<p>Select categories:</p>
 
 <%= form_for(@image, :html => {:multipart => true} ) do |f| %>
   <% @categories.each do |c| %>
@@ -6,8 +6,9 @@
     <%= label_tag c.title %><br>
   <% end %>
 
-  <%= f.label :url %>
+  
   <%= f.cl_image_upload :url, :html => {:required => true} %>
+  <%= f.label :location %><br>
 
-  <%= f.submit %>
+  <%= f.submit "Upload"%>
 <% end %>
