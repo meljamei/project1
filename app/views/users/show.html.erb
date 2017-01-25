@@ -5,7 +5,7 @@
 
     <%= image_tag @user.avatar, :class => 'avatar' %>
     <%= @user.name if @user.name.present? %>
-    <%= link_to "Edit Profile", users_edit_path %>
+    <%= link_to '<button type="button">Edit Profile</button>'.html_safe, users_edit_path %>
   </div>
 </div>
 

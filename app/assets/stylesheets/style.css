@@ -1,5 +1,10 @@
 
-
+.show_image{
+  width: 700px;
+  height: 600px;
+  padding: 20px;
+  margin: 0 100px 0 100px;
+}
 
 img.avatar {
   width: 150px;
@@ -32,5 +37,5 @@ img.nav-avatar {
 
 
 body.pages.home {
-  
+
 }

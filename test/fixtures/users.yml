@@ -10,6 +10,8 @@
 #  avatar          :text
 #  admin           :boolean          default("false")
 #  name            :text
+#  username        :text
+#  bio             :text
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -1,5 +1,5 @@
-$(document).ready(function(){
 
+<<<<<<< HEAD
 
   if ($('body.pages.home').length === 0){
     return;
@@ -18,3 +18,5 @@ $(document).ready(function(){
   }
   console.log("HHeyy easy");
 });
+=======
+>>>>>>> 6d17d90511cdee5c39a0d9bb27bbee6a83dfb3e2
