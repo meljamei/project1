@@ -48,5 +48,13 @@
     background: rgba(215, 2, 64, 0.2);
   }
 
+  .show-image-avatar{
+    text-align:center;
+    padding:10px 0;
+  }
+
+  .show-image-content{
+    text-align: center;
+  }
 
 }

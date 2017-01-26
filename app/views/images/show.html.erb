@@ -1,25 +1,36 @@
 
 <%= render "layouts/header" %>
+<br>
   <div class="container">
-    <%= image_tag @image.user.avatar, :class => 'avatar' %>
-    <div class="jumbotron">
-      <div class="container">
-        <%= cl_image_tag @image.url, :class => "show_image"%>
-      </div>
+    <div class="well well-lg">
+      <div class="row">
+        <div class="col-md-9">
+          <%= cl_image_tag @image.url, :class => 'img-responsive show-image-main'%>
+        </div>
+        <div class="col-md-offset-1 col-md-2">
+          <div class="row show-image-avatar" style="margin-bottom:10px">
+            <%= image_tag @image.user.avatar, :style => "border-radius:50%; width:80px; height:80px; border-color:rgba(215,2,64,.7); border-width:3px; border-style:solid" %>
+          </div>
+          <div class="row show-image-content">
+            <div class="col-md-12">
+              <div class="row" style="margin-bottom:5px">
+                <% if @current_user.present? && @current_user.already_likes?(@image) %>
+                   <%=link_to "Unlike", likes_path(@image), :method => 'delete', :style => "color:rgba(215,2,64,.7)"  %>
+                 <% else %>
+                   <%= link_to "Like", likes_path(@image), :method => 'post', :style => "color:rgba(215,2,64,.7)" %>
+                <% end %>
 
-        <% if @current_user.present? && @current_user.already_likes?(@image) %>
-           <%=link_to "Unlike", likes_path(@image), :method => 'delete' %>
-         <% else %>
-           <%= link_to "Like", likes_path(@image), :method => 'post' %>
-        <% end %>
-
-      <% if @image.like_count > 0 %>
-        <p>Likes: <%=  @image.like_count %></p>
-      <% end %>
-
-      <%= @image.created_at.strftime("%B %d %Y, %l:%M%P") %>
-
-
+                <% if @image.like_count > 0 %>
+                  <p>Likes: <%=  @image.like_count %></p>
+                <% end %>
+              </div>
+              <div class="row" style="margin-bottom:5px">
+                Taken at: <span style="color:rgba(215,2,64,.7)"><%= @image.created_at.strftime("%B %d %Y, %l:%M%P") %></span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 </div>
