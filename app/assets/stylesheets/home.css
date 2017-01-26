@@ -311,37 +311,37 @@ body.home .trigger-headline span {
 	transition-delay: 0.7s;
 }
 
-body.home .js .trigger-headline--hidden span {
+body.home .trigger-headline--hidden span {
 	pointer-events: none;
 	opacity: 0;
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(1) {
+body.home .trigger-headline--hidden span:nth-child(1) {
 	-webkit-transform: translate3d(-100px,0,0);
 	transform: translate3d(-100px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(2) {
+body.home .trigger-headline--hidden span:nth-child(2) {
 	-webkit-transform: translate3d(-50px,0,0);
 	transform: translate3d(-50px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(3) {
+body.home .trigger-headline--hidden span:nth-child(3) {
 	-webkit-transform: translate3d(-25px,0,0);
 	transform: translate3d(-25px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(4) {
+body.home .trigger-headline--hidden span:nth-child(4) {
 	-webkit-transform: translate3d(25px,0,0);
 	transform: translate3d(25px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(5) {
+body.home .trigger-headline--hidden span:nth-child(5) {
 	-webkit-transform: translate3d(50px,0,0);
 	transform: translate3d(50px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(6) {
+body.home .trigger-headline--hidden span:nth-child(6) {
 	-webkit-transform: translate3d(100px,0,0);
 	transform: translate3d(100px,0,0);
 }
@@ -356,32 +356,32 @@ body.home .trigger-headline span {
 	transition-delay: 0.1s;
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(1) {
+body.home .trigger-headline--hidden span:nth-child(1) {
 	-webkit-transform: translate3d(200px,0,0);
 	transform: translate3d(200px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(2) {
+body.home .trigger-headline--hidden span:nth-child(2) {
 	-webkit-transform: translate3d(100px,0,0);
 	transform: translate3d(100px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(3) {
+body.home .trigger-headline--hidden span:nth-child(3) {
 	-webkit-transform: translate3d(50px,0,0);
 	transform: translate3d(50px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(4) {
+body.home .trigger-headline--hidden span:nth-child(4) {
 	-webkit-transform: translate3d(-50px,0,0);
 	transform: translate3d(-50px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(5) {
+body.home .trigger-headline--hidden span:nth-child(5) {
 	-webkit-transform: translate3d(-100px,0,0);
 	transform: translate3d(-100px,0,0);
 }
 
-body.home .js .trigger-headline--hidden span:nth-child(6) {
+body.home .trigger-headline--hidden span:nth-child(6) {
 	-webkit-transform: translate3d(-200px,0,0);
 	transform: translate3d(-200px,0,0);
 }

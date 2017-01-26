@@ -7,7 +7,8 @@
   <div class="segmenter" style="background-image: url(assets/bg.jpg)"></div>
   <h2 class="trigger-headline trigger-headline--hidden"><span>P</span><span>R</span><span>O</span><span></span><span>P</span><span>H</span><span>O</span><span>T</span><span>O</span></h2>
   <div class="bottom-nav">
-    <button class="btn btn--trigger">Show Effect</button>
+    <!-- <button class="btn btn--trigger">Show Effect</button> -->
+		<button class="btn btn--trigger">By: Mel</button>
   </div>
 </main>
 <script src="assets/anime.min.js"></script>
@@ -38,12 +39,16 @@
         {top: 50, left: 67, width: 10, height: 20}
       ],
       onReady: function() {
-        trigger.classList.remove('btn--hidden');
+				/*
+				trigger.classList.remove('btn--hidden');
         trigger.addEventListener('click', function() {
           segmenter.animate();
           headline.classList.remove('trigger-headline--hidden');
           this.classList.add('btn--hidden');
         });
+				*/
+				segmenter.animate();
+				headline.classList.remove('trigger-headline--hidden');
       }
     });
 })();
