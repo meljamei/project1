@@ -281,7 +281,7 @@ body.home .content {
 body.home .trigger-headline {
 	top: 0;
 	left: 0;
-  right 0;
+  right: 0;
 	position: absolute;
 	font-size: 6vw;
 	text-transform: uppercase;
