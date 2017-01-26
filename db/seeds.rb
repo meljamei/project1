@@ -38,13 +38,7 @@ c8 = Category.create :title => 'Dog', :cover_image => 'https://static.pexels.com
 c9 = Category.create :title => 'Portrait', :cover_image => 'http://www.stockvault.net/blog/wp-content/uploads/2013/11/Portrait-8.jpg'
 
 
-# Following relationships
-users = User.all
-user  = users.first
-following = users[2..50]
-followers = users[3..40]
-following.each { |followed| user.follow(followed) }
-followers.each { |follower| follower.follow(user) }
+
 
 
 a1.categories << c1 << c3

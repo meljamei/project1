@@ -6,9 +6,8 @@
     <%= label_tag c.title %><br>
   <% end %>
 
-  
+
   <%= f.cl_image_upload :url, :html => {:required => true} %>
-  <%= f.label :location %><br>
 
   <%= f.submit "Upload"%>
 <% end %>

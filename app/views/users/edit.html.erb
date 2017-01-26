@@ -13,7 +13,8 @@
   <%= f.email_field :email %>
 
   <%= f.label :avatar %>
-  <%= f.url_field :avatar %></br>
+  <%= f.cl_image_upload :url %> <%= f.submit "Upload"%>
+</br>
 
   <%= f.label :name %>
   <%= f.url_field :name %></br>
@@ -25,5 +26,5 @@
   <%= text_area(:post, :body, cols: 20, rows: 8) %></br>
 
 
-  <%= f.submit%>
+  <%= f.submit "Save changes"%>
   <% end %>
