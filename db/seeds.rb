@@ -38,6 +38,13 @@ c8 = Category.create :title => 'Dog', :cover_image => 'https://static.pexels.com
 c9 = Category.create :title => 'Portrait', :cover_image => 'http://www.stockvault.net/blog/wp-content/uploads/2013/11/Portrait-8.jpg'
 
 
+# Following relationships
+users = User.all
+user  = users.first
+following = users[2..50]
+followers = users[3..40]
+following.each { |followed| user.follow(followed) }
+followers.each { |follower| follower.follow(user) }
 
 
 a1.categories << c1 << c3
@@ -45,10 +52,6 @@ a2.categories << c1 << c2 << c3
 a3.categories << c3 << c5 << c4
 
 
-#
-# c1.images << a1 << a2 << a3
-# c2.images << a3
-# c3.images << a1 << a3
 
-u1.images << a1 << a2 << a3 << a4 << a5 << a6 << a7 << a8 << a9
+u1.images << a10 << a11 << a12 << a13 << a14 << a15 << a16 << a17 << a18 << a19 <<a20
 u2.images << a3 << a1 << a4 << a5 << a6 << a7 << a8 << a9 << a2
