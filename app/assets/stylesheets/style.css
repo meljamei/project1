@@ -109,3 +109,16 @@ body.pages.home {
 .navbar{
   margin-bottom: 0 !important;
 }
+
+.sharethis{
+  position:absolute;
+  right:0;
+  top:0;
+  bottom:0;
+  display: flex;
+  align-items: center;
+}
+
+.sharethis li{
+  list-style: none;
+}
