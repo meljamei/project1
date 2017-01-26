@@ -1,14 +1,19 @@
-<h1>Category#show</h1>
-<p>Find me in app/views/category/show.html.erb</p>
-
+<%= render "layouts/header" %>
+<div class="container">
 
 <% @category.images.in_groups_of(3, false).each do |group| %>
   <div class="row">
     <% group.each do |img| %>
-      <div class="col-xs-12 col-md-4">
-        <%= link_to cl_image_tag(img.url, :class => 'img-responsive'), image_path(img.id) %>
+      <div class="col-xs-12 col-md-4 image-container" >
+        <%= link_to image_path(img.id) do %>
+          <div class="overlay" style="display:relative; text-align:cetnter;">
+            <%= image_tag(img.url, :class => 'img-responsive', :style => "object-fit: cover; height:350px")  %>
+        </div>
+        <% end %>
       </div>
+
     <% end %>
   </div>
-<hr>
+
 <% end %>
+</div>

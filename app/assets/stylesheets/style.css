@@ -39,3 +39,30 @@ img.nav-avatar {
 body.pages.home {
 
 }
+
+/* Categories */
+.image-container{
+  margin-bottom: 20px;
+};
+
+.image-container .overlay{
+  position: relative;
+  background:rgba(0,0,0,.75);
+  text-align:center;
+  opacity:0;
+  -webkit-transition: opacity .25s ease;
+}
+
+.image-container .image-container:hover .overlay {
+               opacity:1;}
+
+.image-container .overlay-title {
+  font-family:Helvetica;
+  font-weight:900;
+  color:rgba(215,2,64,.7);
+  font-size:36px;
+}
+
+.navbar{
+  margin-bottom: 0 !important;
+}

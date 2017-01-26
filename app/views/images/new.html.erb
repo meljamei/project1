@@ -1,14 +1,21 @@
-<p>Select categories:</p>
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <p>Select categories:</p>
 
-<%= form_for(@image, :html => {:multipart => true} ) do |f| %>
-  <% @categories.each do |c| %>
-    <%= check_box_tag "category_ids[]", c.id %>
-    <%= label_tag c.title %><br>
-  <% end %>
+      <%= form_for(@image, :html => {:multipart => true} ) do |f| %>
+        <% @categories.each do |c| %>
+          <%= check_box_tag "category_ids[]", c.id %>
+          <%= label_tag c.title %><br>
+        <% end %>
 
-  
-  <%= f.cl_image_upload :url, :html => {:required => true} %>
-  <%= f.label :location %><br>
 
-  <%= f.submit "Upload"%>
-<% end %>
+        <%= f.cl_image_upload :url, :html => {:required => true} %>
+        <%= f.label :location %><br>
+
+        <%= f.submit "Upload", :class => "btn btn-lg btn-primary btn-block"%>
+      <% end %>
+    </div>
+  </div>
+</div>

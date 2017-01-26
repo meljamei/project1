@@ -1,37 +1,64 @@
-<h1>Profile</h1>
+<%= render "layouts/header" %>
+  <div class="jumbotron">
+    <div class="container">
+        <div class="row">
+          <div class="col-md-2">
+            <%= image_tag @user.avatar, :class => 'avatar' %>
+          </div>
+          <div class="col-md-offset-1 col-md-9">
+              <div class="col-md-2 col-xs-6">
+                <div class="row">
+                  <%= @user.name if @user.name.present? %>
+                </div>
+                <div class="row">
+                  Followers:
+                </div>
+                <div class="row">
+                  Following:
+                </div>
+              </div>
+              <div class="col-md-8 col-xs-6">
+                <div class="row">
+                  <%= link_to '<button type="button">Edit Profile</button>'.html_safe, users_edit_path %>
+                </div>
+                <div class="row">
+                  0
+                </div>
+                <div class="row">
+                  0
+                </div>
+              </div>
+          </div>
+        </div>
 
-<div class="jumbotron">
-  <div class="container">
-
-    <%= image_tag @user.avatar, :class => 'avatar' %>
-    <%= @user.name if @user.name.present? %>
-    <%= link_to '<button type="button">Edit Profile</button>'.html_safe, users_edit_path %>
+    </div>
   </div>
-</div>
--------
-
-
--------
-
-<div class="row">
-  <div class="col-md-12">
-    <ul class="profile-images">
-    <!-- <% @user.images.each do |img| %>
-      <li class="col-md-4"><%= image_tag img.url , :class => "box" %></li>
-    <% end %> -->
-
-    </ul>
-  </div>
-</div>
-
-<% @user.images.in_groups_of(3, false).each do |group| %>
+<div class="container">
   <div class="row">
-    <!-- <%= group %> -->
-    <% group.each do |img| %>
-      <div class="col-xs-12 col-md-4">
-        <%= link_to cl_image_tag(img.url, :class => 'img-responsive'), image_path(img.id) %>
-      </div>
-    <% end %>
+    <div class="col-md-12">
+      <ul class="profile-images">
+      <!-- <% @user.images.each do |img| %>
+        <li class="col-md-4"><%= image_tag img.url , :class => "box" %></li>
+      <% end %> -->
+
+      </ul>
+    </div>
   </div>
-<hr>
-<% end %>
+
+  <% @user.images.in_groups_of(3, false).each do |group| %>
+    <div class="row">
+      <!-- <%= group %> -->
+      <% group.each do |img| %>
+        <div class="col-xs-12 col-md-4 image-container" >
+          <%= link_to image_path(img.id) do %>
+            <div class="overlay" style="display:relative; text-align:cetnter;">
+              <%= image_tag(img.url, :class => 'img-responsive', :style => "object-fit: cover; height:350px")  %>
+          </div>
+          <% end %>
+        </div>
+
+      <% end %>
+    </div>
+
+  <% end %>
+</div>

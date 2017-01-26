@@ -1,14 +1,19 @@
 <%= render "layouts/header" %>
 <div class="container">
-  <h1>Categories page</h1>
+  <h1>Categories</h1>
 
 
   <% @categories.in_groups(3, false).each do |group| %>
     <div class="row">
       <% group.each do |cat| %>
-        <div class="col-xs-12 col-md-4">
-          <%= link_to image_tag(cat.cover_image, :class => 'img-responsive'), cat %>
-        </div>
+          <div class="col-xs-12 col-md-4 image-container <%= cat.title %>" >
+            <%= link_to cat do %>
+              <div class="overlay" style="display:relative; text-align:cetnter;">
+                <span class="overlay-title" style="position:absolute"><%= cat.title %></span>
+                <%= image_tag(cat.cover_image, :class => 'img-responsive', :style => "object-fit: cover; height:350px")  %>
+            </div>
+            <% end %>
+          </div>
       <% end %>
     </div>
   <% end %>

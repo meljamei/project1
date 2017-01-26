@@ -1,29 +1,45 @@
-<h1>Edit Profile</h1>
+<%= render "layouts/header" %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-4 col-md-4">
+      <h1>Edit Profile</h1>
 
-<% if @current_user.errors.any? %>
-  <ol>
-    <% @current_user.errors.ful_message.each do |msg|%>
-    <li> <%= msg %></li>
-    <%end %>
-  </ol>
-  <% end %>
+      <% if @current_user.errors.any? %>
+        <ol>
+          <% @current_user.errors.ful_message.each do |msg|%>
+          <li> <%= msg %></li>
+          <%end %>
+        </ol>
+        <% end %>
 
-  <%= form_for @current_user do |f| %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
+        <%= form_for @current_user do |f| %>
+        <div class="form-group">
+          <%= f.label :email %>
+          <%= f.email_field :email, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :avatar %>
+          <%= f.text_field :avatar, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :name %>
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :username %>
+          <%= f.text_field :username, :class => 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :bio %><br>
+          <%= text_area(:post, :body, cols: 20, rows: 8)%>
+        </div>
+        <div style="margin-top:20px">
+          <%= f.submit :class => "btn btn-lg btn-primary btn-block"%>
+        </div>
 
-  <%= f.label :avatar %>
-  <%= f.url_field :avatar %></br>
+        <% end %>
+    </div>
 
-  <%= f.label :name %>
-  <%= f.url_field :name %></br>
+  </div>
 
-  <%= f.label :username %>
-  <%= f.url_field :username %></br>
-
-  <%= f.label :bio %>
-  <%= text_area(:post, :body, cols: 20, rows: 8) %></br>
-
-
-  <%= f.submit%>
-  <% end %>
+</div>
