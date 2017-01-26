@@ -1,4 +1,24 @@
 <h1>Images#show</h1>
-<p>Find me in app/views/images/show.html.erb</p>
 
-<%= cl_image_tag @image.url %>
+
+<%= image_tag @image.user.avatar, :class => 'avatar' %>
+<div class="jumbotron">
+  <div class="container">
+    <%= cl_image_tag @image.url, :class => "show_image"%>
+  </div>
+
+    <% if @current_user.present? && @current_user.already_likes?(@image) %>
+       <%=link_to "Unlike", likes_path(@image), :method => 'delete' %>
+     <% else %>
+       <%= link_to "Like", likes_path(@image), :method => 'post' %>
+    <% end %>
+
+  <% if @image.like_count > 0 %>
+    <p>Likes: <%=  @image.like_count %></p>
+  <% end %>
+
+  <%= @image.created_at.strftime("%B %d %Y, %l:%M%P") %>
+
+
+  </div>
+</div>

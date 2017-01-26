@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   resources :categories
   resources :images
 
-  get '/categories' => 'categories#index'
+  post '/images/:image_id/likes' => 'likes#create', :as => 'likes'
+  delete '/images/:image_id/likes' => 'likes#destroy'
+
+  
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'

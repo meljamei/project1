@@ -1,18 +1,17 @@
 # == Schema Information
 #
-# Table name: categories
+# Table name: relationships
 #
 #  id          :integer          not null, primary key
-#  title       :text
-#  user_id     :integer
+#  follower_id :integer
+#  followed_id :integer
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
-#  cover_image :text
 #
 
 require 'test_helper'
 
-class CategoryTest < ActiveSupport::TestCase
+class RelationshipTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

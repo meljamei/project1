@@ -1,19 +1,17 @@
 # == Schema Information
 #
-# Table name: images
+# Table name: likes
 #
 #  id         :integer          not null, primary key
-#  user_id    :integer
-#  url        :text
+#  image_id   :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  latitude   :float
-#  longitude  :float
+#  user_id    :integer
 #
 
 require 'test_helper'
 
-class ImageTest < ActiveSupport::TestCase
+class LikeTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

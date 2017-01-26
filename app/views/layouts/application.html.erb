@@ -11,6 +11,15 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- Sharing section -->
+ <span class='st_sharethis_large' displayText='ShareThis'></span>
+ <span class='st_facebook_large' displayText='Facebook'></span>
+ <span class='st_twitter_large' displayText='Tweet'></span>
+ <span class='st_linkedin_large' displayText='LinkedIn'></span>
+ <span class='st_pinterest_large' displayText='Pinterest'></span>
+ <span class='st_email_large' displayText='Email'></span>
+
 </head>
 <body class="<%= params[:controller] %> <%=params[:action]%>">
   <nav class="navbar navbar-default">
@@ -67,8 +76,9 @@
 <div class="container">
   <%= yield %>
   </div>
-
-
+  <script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" id="st_insights_js" src="http://w.sharethis.com/button/buttons.js?publisher=14bf8aca-ae4c-4f0f-9214-acc1c6de3a54"></script>
+<script type="text/javascript">stLight.options({publisher: "14bf8aca-ae4c-4f0f-9214-acc1c6de3a54", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
 
 </body>
 </html>

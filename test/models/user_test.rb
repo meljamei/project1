@@ -10,6 +10,8 @@
 #  avatar          :text
 #  admin           :boolean          default("false")
 #  name            :text
+#  username        :text
+#  bio             :text
 #
 
 require 'test_helper'

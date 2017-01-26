@@ -18,5 +18,12 @@
   <%= f.label :name %>
   <%= f.url_field :name %></br>
 
+  <%= f.label :username %>
+  <%= f.url_field :username %></br>
+
+  <%= f.label :bio %>
+  <%= text_area(:post, :body, cols: 20, rows: 8) %></br>
+
+
   <%= f.submit%>
   <% end %>

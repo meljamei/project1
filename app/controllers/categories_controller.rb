@@ -8,6 +8,12 @@ class CategoriesController < ApplicationController
 
   end
 
+  def search
+    @categories = Category.search(params[:query])
+    raise @categories.inspect
+  end
+
+
   def create
     category = Category.create category_params
     redirect_to category
