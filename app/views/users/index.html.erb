@@ -6,19 +6,19 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>#</th>
+
             <th>Image</th>
             <th>Name</th>
-            <th>Username</th>
+            <th>Email</th>
           </tr>
         </thead>
         <tbody>
           <% @users.each do |user| %>
             <tr>
-              <th scope="row">2</th>
+              <th scope="row"></th>
               <td><%= image_tag user.avatar, :class => 'avatar'  %></td>
               <td><%= link_to user.name, user_path(user) %></td>
-              <td><%= link_to user.name, user_path(user) %></td>
+              <td><%= link_to user.email, user_path(user) %></td>
             </tr>
           <% end %>
 

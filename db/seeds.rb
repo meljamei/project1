@@ -36,16 +36,3 @@ c6 = Category.create :title => 'Food', :cover_image => 'https://static.pexels.co
 c7 = Category.create :title => 'Car', :cover_image => 'https://static.pexels.com/photos/173286/pexels-photo-173286.jpeg'
 c8 = Category.create :title => 'Dog', :cover_image => 'https://static.pexels.com/photos/139519/pexels-photo-139519.jpeg'
 c9 = Category.create :title => 'Portrait', :cover_image => 'http://www.stockvault.net/blog/wp-content/uploads/2013/11/Portrait-8.jpg'
-
-
-
-
-
-a1.categories << c1 << c3
-a2.categories << c1 << c2 << c3
-a3.categories << c3 << c5 << c4
-
-
-
-u1.images << a10 << a11 << a12 << a13 << a14 << a15 << a16 << a17 << a18 << a19 <<a20
-u2.images << a3 << a1 << a4 << a5 << a6 << a7 << a8 << a9 << a2
