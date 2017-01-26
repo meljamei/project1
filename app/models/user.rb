@@ -19,8 +19,8 @@ class User < ActiveRecord::Base
   has_many :categories, :through => :images
   has_many :likes
   has_secure_password
-  has_many :relationships
-  has_many :following, through: :active_relationships, source: :followed
+
+
   validates :email, :presence => true, :uniqueness => true, :length => {:minimum => 5}
 
   def already_likes?(image)
@@ -31,5 +31,4 @@ class User < ActiveRecord::Base
 
     self.likes.where('image_id = ?', image.id).size > 0
   end
-
 end
