@@ -91,8 +91,8 @@ body.pages.home {
 .image-container .overlay{
   position: relative;
   background:rgba(0,0,0,.75);
-  text-align:center;
-  opacity:0;
+  /*text-align:center;*/
+  /*opacity:0;*/
   -webkit-transition: opacity .25s ease;
 }
 
