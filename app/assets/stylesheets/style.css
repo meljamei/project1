@@ -104,6 +104,9 @@ body.pages.home {
   font-weight:900;
   color:rgba(215,2,64,.7);
   font-size:36px;
+  width: 100%;
+  text-align: center;
+  line-height: 375px;
 }
 
 .navbar{
