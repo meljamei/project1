@@ -12,14 +12,14 @@
         </ol>
         <% end %>
 
-        <%= form_for @current_user do |f| %>
+        <%= form_for(@current_user, :html => {:multipart => true}) do |f| %>
         <div class="form-group">
           <%= f.label :email %>
           <%= f.email_field :email, :class => 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :avatar %>
-          <%= f.text_field :avatar, :class => 'form-control' %>
+          <%= f.cl_image_upload :file, :class => 'form-control' %>
         </div>
         <div class="form-group">
           <%= f.label :name %>
